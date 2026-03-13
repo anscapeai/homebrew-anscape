@@ -8,20 +8,18 @@ class Anscape < Formula
   version "0.1.0"
   license "MIT"
 
-  depends_on "go" => :build
-
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anscapeai/anscape/releases/download/v0.1.0/anscape_0.1.0_darwin_amd64.tar.gz"
-      sha256 "da020dfae52e1bb62c767cedbd9d3d44e7fd766c3170a97638f780554822db31"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.0/anscape_0.1.0_darwin_amd64.tar.gz"
+      sha256 "330ad372f5a9d0531d362185d40275dcbdf9f5d9e9f9bf8361e98a2c090b5d13"
 
       define_method(:install) do
         bin.install "anscape"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/anscapeai/anscape/releases/download/v0.1.0/anscape_0.1.0_darwin_arm64.tar.gz"
-      sha256 "9cca5c79d721cd0778d2d9d3db6ff9810f87bc9040b16968f0e8fb299ab3bc57"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.0/anscape_0.1.0_darwin_arm64.tar.gz"
+      sha256 "0336e3e9d2f2b73c40061f5a98e688bc26d600b1ded4d8b308bb3d1a4e365234"
 
       define_method(:install) do
         bin.install "anscape"
@@ -31,15 +29,15 @@ class Anscape < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anscapeai/anscape/releases/download/v0.1.0/anscape_0.1.0_linux_amd64.tar.gz"
-      sha256 "7b6f8a5b3414af76e12ea220aa21eca10cb1ddcd50e27d88cbb2798479cba26f"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.0/anscape_0.1.0_linux_amd64.tar.gz"
+      sha256 "67d60feb600f1cb039f3befa427900a24aa4512175ea2ad44454dce48692992e"
       define_method(:install) do
         bin.install "anscape"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anscapeai/anscape/releases/download/v0.1.0/anscape_0.1.0_linux_arm64.tar.gz"
-      sha256 "14f1b297e12bdf2ec8d2c11123443017aa6ed74cb254a62eb0309764e6e7ee05"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.0/anscape_0.1.0_linux_arm64.tar.gz"
+      sha256 "f2cad84ce10356b7cdc9b73c0f2f5ecfe7b507a68046360e56137682acaf9d07"
       define_method(:install) do
         bin.install "anscape"
       end

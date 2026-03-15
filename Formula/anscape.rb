@@ -11,7 +11,7 @@ class Anscape < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.2/anscape_0.1.2_darwin_amd64.tar.gz"
-      sha256 "368243c1babdf44f25c6f552bd916f8cd0340f2f98cc7d68cf6d6b8a54fcc35e"
+      sha256 "416cd4b51476bdeef60f1c302791b094027f065ea24d88183952ae674b4b5971"
 
       define_method(:install) do
         bin.install "anscape"
@@ -19,7 +19,7 @@ class Anscape < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.2/anscape_0.1.2_darwin_arm64.tar.gz"
-      sha256 "2b9e2ffefd43fb7f93f2c8274dcf180560d4c3be4540907c4c69f1577ab0ab73"
+      sha256 "eff0f2c9b37926d3dce3439a7df447106cd1df2eee21a2b4443420aaec11d33e"
 
       define_method(:install) do
         bin.install "anscape"
@@ -30,14 +30,14 @@ class Anscape < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.2/anscape_0.1.2_linux_amd64.tar.gz"
-      sha256 "cc00bce309aea64bc2ce91164121df68b24c7663fd158941508277fe05c90771"
+      sha256 "5844eceebba5f316312e65dced659893adfe8d50abff208b6afe02c20ba9d32b"
       define_method(:install) do
         bin.install "anscape"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/anscapeai/anscape-releases/releases/download/v0.1.2/anscape_0.1.2_linux_arm64.tar.gz"
-      sha256 "4f55fd5111dcd8e2b09eb68b744c84e0fe257f7bc6e6852dbebb3de73c32f297"
+      sha256 "0284154bef5055a5dda945d4535fab64ebe2f3c69daba7bb61fe3fb903de1ba8"
       define_method(:install) do
         bin.install "anscape"
       end

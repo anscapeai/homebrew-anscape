@@ -5,21 +5,21 @@
 class Anscape < Formula
   desc "Bridge local commands to Anscape cloud agents"
   homepage "https://anscape.com"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.0/anscape_1.1.0_darwin_amd64.tar.gz"
-      sha256 "35aea3d3d63e148e10dbee1600e196707f7190b58323ce1b7aa002e66cd884cb"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.1/anscape_1.1.1_darwin_amd64.tar.gz"
+      sha256 "0c30d8c879a48638355c673d59f5fcb33341d3346b5cd0976f7da9d4052faa31"
 
       define_method(:install) do
         bin.install "anscape"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.0/anscape_1.1.0_darwin_arm64.tar.gz"
-      sha256 "935166858cf1ca3e9e197e5abf994c3235713c9896ed9daf39aa8cf2c8b213e1"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.1/anscape_1.1.1_darwin_arm64.tar.gz"
+      sha256 "01363da2ea3bf2cbeadcbf29b9de5c607b2c03026bce6a7ce2751bbbcc7065ad"
 
       define_method(:install) do
         bin.install "anscape"
@@ -29,15 +29,15 @@ class Anscape < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.0/anscape_1.1.0_linux_amd64.tar.gz"
-      sha256 "65b17e3ea511a14963b2b56395ad9aa1397f9560b8fa026581ae6d52c437cc4a"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.1/anscape_1.1.1_linux_amd64.tar.gz"
+      sha256 "6186a57650fcbeb1098eb9741bdfcc86c62dad69426a37312f041970dd2c830d"
       define_method(:install) do
         bin.install "anscape"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.0/anscape_1.1.0_linux_arm64.tar.gz"
-      sha256 "cca57432fbd86d4c22ba89ceff09721823ee75d81c85c9886d5f9d30d58e6519"
+      url "https://github.com/anscapeai/anscape-releases/releases/download/v1.1.1/anscape_1.1.1_linux_arm64.tar.gz"
+      sha256 "6d2c7c4d4057cb6d8a5262e18a4c9fbf5f0a69806bac97388d676688e5267e35"
       define_method(:install) do
         bin.install "anscape"
       end
